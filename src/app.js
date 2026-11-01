@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.json());
 
 app.use('/api/health', healthRouter);
+app.use('/api/health/db', healthRouter);
 
 app.use((req, res) => {
     res.status(404).json({ error: 'Not found' });
